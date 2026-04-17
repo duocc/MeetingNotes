@@ -1,0 +1,8 @@
+{
+  "name": "MeetingNotes AI",
+  "description": "会议录音实录，支持智能总结与格式化文本输出。",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": []
+}

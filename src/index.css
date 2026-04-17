@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-app-bg: #0A0A0B;
+  --color-card-bg: #1C1C1E;
+  --color-accent-red: #FF453A;
+  --color-accent-blue: #0A84FF;
+  --color-accent-orange: #FF9F0A;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #8E8E93;
+  --color-glass: rgba(255, 255, 255, 0.08);
+  --color-border-subtle: rgba(255, 255, 255, 0.1);
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-app-bg text-text-primary font-sans antialiased;
+  }
+
+  .prose h1 { @apply text-2xl font-bold mt-6 mb-4 text-text-primary; }
+  .prose h2 { @apply text-xl font-bold mt-5 mb-3 text-text-primary; }
+  .prose h3 { @apply text-lg font-bold mt-4 mb-2 text-text-primary; }
+  .prose p { @apply mb-4 leading-relaxed text-text-primary/90; }
+  .prose ul { @apply list-disc pl-5 mb-4 text-text-primary/90; }
+  .prose ol { @apply list-decimal pl-5 mb-4 text-text-primary/90; }
+  .prose li { @apply mb-1; }
+  .prose strong { @apply font-bold text-white; }
+  .prose blockquote { @apply border-l-4 border-accent-blue pl-4 italic text-text-secondary mb-4; }
+}
+
+.glass-morphism {
+  @apply bg-glass backdrop-blur-3xl border border-border-subtle;
+}
+
+.status-glow {
+  box-shadow: 0 0 12px var(--color-accent-red);
+}
